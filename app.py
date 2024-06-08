@@ -6,8 +6,7 @@ app = Flask(__name__, template_folder='templates', static_folder="static")
 def home():
     return render_template('index.html')
 
-# test
-
+#testssss
 
 if __name__=='__main__':
     app.run(debug=True)
