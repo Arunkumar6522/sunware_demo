@@ -6,7 +6,6 @@ app = Flask(__name__, template_folder='templates', static_folder="static")
 def home():
     return render_template('index.html')
 
-# test
 
 
 if __name__=='__main__':
