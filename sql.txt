@@ -11,7 +11,8 @@ CREATE TABLE users (
     primary_skills VARCHAR(255),
     secondary_skills VARCHAR(255),
     interested_technology VARCHAR(255),
-    language_interested VARCHAR(255)
+    language_interested VARCHAR(255),
+    email VARCHAR(255)
 );
 
 select * from users;
