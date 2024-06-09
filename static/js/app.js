@@ -188,8 +188,16 @@ TechnicalSubmitbutton.addEventListener("click", (e) => {
 
 
 
-
 document.addEventListener("DOMContentLoaded", function () {
+  // Check the URL hash and display the submitted page if needed
+  if (window.location.hash === "#submitted") {
+    gsap.set(".technical, .contact-right, .contact-left", { display: "none" });
+    gsap.set(".submitted", { display: "flex", opacity: 1, y: 0 });
+    personalStepBtn.classList.add("js-active");
+    technicalStepBtn.classList.add("js-active");
+    submittedStepBtn.classList.add("js-active");
+  }
+
   // Get the button element
   var formStepBtn = document.getElementById("personal");
 
@@ -202,3 +210,5 @@ document.addEventListener("DOMContentLoaded", function () {
     history.pushState(null, null, "#" + id);
   });
 });
+
+

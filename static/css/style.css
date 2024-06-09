@@ -14,6 +14,14 @@ body {
   background: linear-gradient(90deg, #6190e8, #a7bfe8);
 }
 
+.logo_container{
+  position: absolute;
+  top: 0;
+  left: 10px;
+  height: 4rem;
+  width: auto;
+}
+
 
 .progressbar_container {
   height: 10%;

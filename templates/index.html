@@ -18,10 +18,22 @@
   <!-- Select2 JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('submitted')) {
+            alert("Form submitted");
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    });
+</script>
   <title>Forms</title>
 </head>
 
 <body>
+  <div class="logo_container">
+    Logo
+  </div>
 
   <div class="progressbar_container">
     <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
@@ -42,7 +54,7 @@
       <div class="personal_form_left">
         <!-- Name -->
         <div class="input-container">
-          
+
           <input type="text" name="name" autocomplete="off" class="input-name input" placeholder="Full Name">
           <svg class="line-svg" width="400" height="2" viewBox="0 0 400 2" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -55,7 +67,8 @@
         <!-- Experience (Range Slider) -->
         <div class="input-container">
           <label for="Total_Experience">Total Experience</label>
-          <select id="Total_Experience" name="Total_Experience" class="input-branch drodown_input "  aria-placeholder="Primary Skill" multiple >
+          <select id="Total_Experience" name="Total_Experience" class="input-branch drodown_input "
+            aria-placeholder="Primary Skill" multiple>
             <option value="branch1">Branch 1</option>
             <option value="branch2">Branch 2</option>
             <option value="branch3">Branch 3</option>
@@ -65,7 +78,8 @@
         <!-- Branch (Dropdown) -->
         <div class="input-container">
           <label for="Branch_Name">Branch Name</label>
-          <select id="Branch_Name"  name="Branch_Name" class="input-branch drodown_input " multiple aria-placeholder="Primary Skill">
+          <select id="Branch_Name" name="Branch_Name" class="input-branch drodown_input " multiple
+            aria-placeholder="Primary Skill">
             <option value="branch1">Branch 1</option>
             <option value="branch2">Branch 2</option>
             <option value="branch3">Branch 3</option>
@@ -77,18 +91,31 @@
 
 
       <div class="personal_form_right">
-         
+
+        <div class="input-container">
+          <input type="email" id="email" name="email" autocomplete="off" class="input-name input"
+            placeholder="Enter Email">
+          <svg class="line-svg" width="400" height="2" viewBox="0 0 400 2" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path class="elastic-line"
+              d="M0 0.999512C0 0.999512 60.5 0.999512 150 0.999512C239.5 0.999512 300 0.999512 300 0.999512"
+              stroke="#D1D4DA" stroke-width="2" />
+          </svg>
+          </select>
+
+        </div>
+
         <!-- Gender (Radio Button) -->
         <div class="input-container">
           <p class="placeholder">Gender</p>
-          <label><input type="radio" name="gender" value="male"> Male</label>
-          <label><input type="radio" name="gender" value="female"> Female</label>
+          <label><input type="radio" id="gender" name="gender" value="male"> Male</label>
+          <label><input type="radio" id="gender" name="gender" value="female"> Female</label>
 
         </div>
 
         <!-- Communication Level (Radio Button) -->
         <div class="input-container">
-          <p class="placeholder" id="communication" name="communication" >Communication Level</p>
+          <p class="placeholder" id="communication" name="communication">Communication Level</p>
           <label><input type="radio" name="communication" value="excellent"> Excellent</label>
           <label><input type="radio" name="communication" value="good"> Good</label>
           <label><input type="radio" name="communication" value="average"> Average</label>
@@ -97,10 +124,6 @@
 
 
       </div>
-
-
-
-
     </div>
 
 
@@ -243,7 +266,8 @@
         <!-- Project Name -->
         <div class="input-container">
           <label for="project_name">Project Name</label>
-          <select id="project_name" name="project_name" class="input-branch drodown_input " multiple aria-placeholder="Project Name">
+          <select id="project_name" name="project_name" class="input-branch drodown_input " multiple
+            aria-placeholder="Project Name">
             <option value="branch2">Branch 2</option>
             <option value="branch3">Branch 3</option>
           </select>
@@ -253,7 +277,8 @@
         <!-- Primary skill -->
         <div class="input-container">
           <label for="primary_skills">Primary Skills</label>
-          <select id="primary_skills" name="primary_skills" class="input-branch drodown_input " multiple aria-placeholder="Primary Skill">
+          <select id="primary_skills" name="primary_skills" class="input-branch drodown_input " multiple
+            aria-placeholder="Primary Skill">
             <option value="branch1">Branch 1</option>
             <option value="branch2">Branch 2</option>
             <option value="branch3">Branch 3</option>
@@ -264,7 +289,8 @@
         <!-- Secondary skill -->
         <div class="input-container">
           <label for="secondary_skills">Secondary Skills</label>
-          <select id="secondary_skills" name="secondary_skills" class="input-branch drodown_input" multiple aria-placeholder="Secondary Skill">
+          <select id="secondary_skills" name="secondary_skills" class="input-branch drodown_input" multiple
+            aria-placeholder="Secondary Skill">
             <option value="branch1">Branch 1</option>
             <option value="branch2">Branch 2</option>
             <option value="branch3">Branch 3</option>
@@ -279,8 +305,8 @@
         <!-- Tech Intrested -->
         <div class="input-container">
           <label for="Intrested_Techonology">Intrested Techonology</label>
-          <select id="Intrested_Techonology" name="Intrested_Techonology" class="input-branch drodown_input" multiple placeholder="Tech Intrested"
-            aria-placeholder="Tech Intrested">
+          <select id="Intrested_Techonology" name="Intrested_Techonology" class="input-branch drodown_input" multiple
+            placeholder="Tech Intrested" aria-placeholder="Tech Intrested">
             <option value="branch1">Branch 1</option>
             <option value="branch2">Branch 2</option>
             <option value="branch3">Branch 3</option>
@@ -291,10 +317,11 @@
         <!-- Language Intrested -->
         <div class="input-container">
           <label for="language_intrested">Language Intrested</label>
-          <select class="input-branch drodown_input" name="language_intrested" id="language_intrested" multiple data-placeholder="please select">
+          <select class="input-branch drodown_input" name="language_intrested" id="language_intrested" multiple
+            data-placeholder="please select">
             <option value="branch1">Branch 1</option>
             <option value="branch2">Branch 2</option>
-            <option value="branch3">Branch 3</option> 
+            <option value="branch3">Branch 3</option>
           </select>
 
         </div>
