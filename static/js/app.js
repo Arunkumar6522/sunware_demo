@@ -174,7 +174,7 @@ TechnicalSubmitbutton.addEventListener("click", (e) => {
     );
 
     // Update the URL to include the ID "submitted"
-    history.pushState(null, null, "#submitted");
+    // history.pushState(null, null, "#submitted");
 
     // Update progress bar
     personalStepBtn.classList.add("js-active");
