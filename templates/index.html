@@ -30,72 +30,48 @@
         <div id="technical" class="multisteps-form__progress-btn ">Technical Details</div>
         <div id="submittedStep" class="multisteps-form__progress-btn">Submitted</div>
       </div>
-    </div>
-  </div>
-
-  <form class="sub_form_container" id="myForm" action="{{ url_for('submit_form') }}" method="POST">
-
-
-    <!-- Right side -->
-    <div class="contact-right">
-
-      <div class="personal_form_left">
-        <!-- Name -->
-        <div class="input-container">
-          
-          <input type="text" name="name" autocomplete="off" class="input-name input" placeholder="Full Name">
-          <svg class="line-svg" width="400" height="2" viewBox="0 0 400 2" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path class="elastic-line"
-              d="M0 0.999512C0 0.999512 60.5 0.999512 150 0.999512C239.5 0.999512 300 0.999512 300 0.999512"
-              stroke="#D1D4DA" stroke-width="2" />
+      <!--Right side-->
+      <div class="contact-right">
+          <div class="input-container">
+              <p class="placeholder">Your Name</p>
+              <input type="text" name="name" autocomplete="off" class="input-name input">
+              <svg class="line-svg" width="300" height="2" viewBox="0 0 300 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="elastic-line" d="M0 0.999512C0 0.999512 60.5 0.999512 150 0.999512C239.5 0.999512 300 0.999512 300 0.999512" stroke="#D1D4DA" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="input-container">
+            <p class="placeholder">Your Email</p>
+            <input type="email" name="email" autocomplete="off" class="input-email input">
+            <svg class="line-svg" width="300" height="2" viewBox="0 0 300 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="elastic-line" d="M0 0.999512C0 0.999512 60.5 0.999512 150 0.999512C239.5 0.999512 300 0.999512 300 0.999512" stroke="#D1D4DA" stroke-width="2"/>
           </svg>
         </div>
-
-        <!-- Experience (Range Slider) -->
         <div class="input-container">
-          <label for="Total_Experience">Total Experience</label>
-          <select id="Total_Experience" name="Total_Experience" class="input-branch drodown_input "  aria-placeholder="Primary Skill" multiple >
-            <option value="branch1">Branch 1</option>
-            <option value="branch2">Branch 2</option>
-            <option value="branch3">Branch 3</option>
-          </select>
-
+            <p class="placeholder">Phone Number</p>
+            <input type="tel" name="tel" autocomplete="off" class="input-number input">
+            <svg class="line-svg" width="300" height="2" viewBox="0 0 300 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="elastic-line" d="M0 0.999512C0 0.999512 60.5 0.999512 150 0.999512C239.5 0.999512 300 0.999512 300 0.999512" stroke="#D1D4DA" stroke-width="2"/>
+          </svg>
         </div>
-        <!-- Branch (Dropdown) -->
-        <div class="input-container">
-          <label for="Branch_Name">Branch Name</label>
-          <select id="Branch_Name"  name="Branch_Name" class="input-branch drodown_input " multiple aria-placeholder="Primary Skill">
-            <option value="branch1">Branch 1</option>
-            <option value="branch2">Branch 2</option>
-            <option value="branch3">Branch 3</option>
-          </select>
-
+        <div class="promo-container">
+            <div class="checkbox-container">
+                <span class="checkmark"></span>
+                <div class="checkbox-fill"></div>
+                <input type="checkbox" type="checkbox" class="checkbox">
+                <svg
+                width="19"
+                height="16"
+                viewBox="0 0 19 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="tick-mark"
+              >
+                <path class="elastic-line" d="M2 8.5L6.5 13L17.5 2" stroke="white" stroke-width="4" />
+              </svg>
+            </div>
+            <label class="checkbox-label">Send me promotions and offers.</label>
         </div>
-
-      </div>
-
-
-      <div class="personal_form_right">
-         
-        <!-- Gender (Radio Button) -->
-        <div class="input-container">
-          <p class="placeholder">Gender</p>
-          <label><input type="radio" name="gender" value="male"> Male</label>
-          <label><input type="radio" name="gender" value="female"> Female</label>
-
-        </div>
-
-        <!-- Communication Level (Radio Button) -->
-        <div class="input-container">
-          <p class="placeholder" id="communication" name="communication" >Communication Level</p>
-          <label><input type="radio" name="communication" value="excellent"> Excellent</label>
-          <label><input type="radio" name="communication" value="good"> Good</label>
-          <label><input type="radio" name="communication" value="average"> Average</label>
-        </div>
-        <button id="submitPersonalDataButton">Next</button>
-
-
+        <button>Join</button>
       </div>
 
 
@@ -237,78 +213,8 @@
       </defs>
     </svg>
 
-    <div class="technical techdropdown_container" id="technical">
-
-      <div class="personal_form_left">
-        <!-- Project Name -->
-        <div class="input-container">
-          <label for="project_name">Project Name</label>
-          <select id="project_name" name="project_name" class="input-branch drodown_input " multiple aria-placeholder="Project Name">
-            <option value="branch2">Branch 2</option>
-            <option value="branch3">Branch 3</option>
-          </select>
-        </div>
-
-
-        <!-- Primary skill -->
-        <div class="input-container">
-          <label for="primary_skills">Primary Skills</label>
-          <select id="primary_skills" name="primary_skills" class="input-branch drodown_input " multiple aria-placeholder="Primary Skill">
-            <option value="branch1">Branch 1</option>
-            <option value="branch2">Branch 2</option>
-            <option value="branch3">Branch 3</option>
-          </select>
-
-        </div>
-
-        <!-- Secondary skill -->
-        <div class="input-container">
-          <label for="secondary_skills">Secondary Skills</label>
-          <select id="secondary_skills" name="secondary_skills" class="input-branch drodown_input" multiple aria-placeholder="Secondary Skill">
-            <option value="branch1">Branch 1</option>
-            <option value="branch2">Branch 2</option>
-            <option value="branch3">Branch 3</option>
-          </select>
-
-        </div>
-
-      </div>
-
-
-      <div class="personal_form_right">
-        <!-- Tech Intrested -->
-        <div class="input-container">
-          <label for="Intrested_Techonology">Intrested Techonology</label>
-          <select id="Intrested_Techonology" name="Intrested_Techonology" class="input-branch drodown_input" multiple placeholder="Tech Intrested"
-            aria-placeholder="Tech Intrested">
-            <option value="branch1">Branch 1</option>
-            <option value="branch2">Branch 2</option>
-            <option value="branch3">Branch 3</option>
-          </select>
-
-        </div>
-
-        <!-- Language Intrested -->
-        <div class="input-container">
-          <label for="language_intrested">Language Intrested</label>
-          <select class="input-branch drodown_input" name="language_intrested" id="language_intrested" multiple data-placeholder="please select">
-            <option value="branch1">Branch 1</option>
-            <option value="branch2">Branch 2</option>
-            <option value="branch3">Branch 3</option> 
-          </select>
-
-        </div>
-        <!-- id="submitTechDataButton" -->
-        <button type="submit" class="techformsubmitbutton" value="submit">Submit</button>
-
-
-      </div>
-
-
-    </div>
-
-    <div class="submitted" id="submitted">
-      <p>Thanks for submitting.
+    <div class="submitted">
+        <p>Thanks for submitting. </br> You'll hear from us soon 👏</p>
     </div>
   </form>
 
